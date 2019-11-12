@@ -44,7 +44,7 @@ public class EncryptDecorator extends DataSourceDecorator{
         List<String> newdata = new ArrayList<>();
         for (String string : data) {
             try {
-                newdata.add(decrypt(HexStringToBytes(string)));
+                newdata.add(decrypt(base10StringToBytes(string)));
             } catch (GeneralSecurityException ex) {
                 Logger.getLogger(EncryptDecorator.class.getName()).log(Level.SEVERE, null, ex);
             } catch (Exception ex) {
@@ -85,7 +85,7 @@ public class EncryptDecorator extends DataSourceDecorator{
         return s;
     }
    
-    public static byte[] HexStringToBytes(String s){
+    public static byte[] base10StringToBytes(String s){
         String[] split = s.split(" ");
         byte[] encrypted = new byte[split.length];
         for (int i = 0; i < split.length; i++) {
