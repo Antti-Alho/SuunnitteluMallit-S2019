@@ -10,7 +10,9 @@ public class EncryptionTest {
         Decrypt decrypt = new Decrypt();
         byte[] ciphertext = decrypt.encrypt("jukka");
         String s = decrypt.tostring(ciphertext);
+        System.out.println(s);
         byte[] b = decrypt.HexStringToBytes(s);
+        System.out.println(decrypt.tostring(b));
         System.out.println(ciphertext);
         System.out.println(b);
         System.out.println("decrypted value:" + decrypt.decrypt(b));

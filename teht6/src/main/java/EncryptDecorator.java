@@ -33,7 +33,7 @@ public class EncryptDecorator extends DataSourceDecorator{
                 byte[] b = encrypt(string);
                 String s = "";
                 for (byte d : b) {
-                    s = s + d;
+                    s = s + Byte.toString(d);
                 }
                 returnData.add(s);
             } catch (GeneralSecurityException ex) {
@@ -78,7 +78,7 @@ public class EncryptDecorator extends DataSourceDecorator{
     
     private Cipher getMutual() throws Exception {
         Cipher cipher = Cipher.getInstance("AES");
-        return cipher;// cipher.doFinal(pass.getBytes());
+        return cipher;
     }
     
     private Key getAesKey() throws Exception {
