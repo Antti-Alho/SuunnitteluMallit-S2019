@@ -21,6 +21,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+        DataSource dstyham = new DataSourceDecorator(new FileDataSource("text.txt"));
         DataSource ds = new EncryptDecorator(new DataSourceDecorator(new FileDataSource("text.txt")));
         
         while (true) {
@@ -38,8 +39,16 @@ public class Main {
                 }
                 ds.writeData(data);
             } else if(input.equals("2")) {
-                System.out.println("tiedoston nimi text.txt");
+                System.out.println("Luetaan tiedostosta: tiedoston nimi text.txt");
                 List<String> output = ds.readData();
+                List<String> arg = dstyham.readData();
+                
+                System.out.println("luetaan raakana:");
+                arg.forEach((string) -> {
+                    System.out.println(string);
+                });
+                
+                System.err.println("luetaan decryptattuna:");
                 output.forEach((string) -> {
                     System.out.println(string);
                 });
