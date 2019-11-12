@@ -22,7 +22,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         DataSource dstyham = new DataSourceDecorator(new FileDataSource("text.txt"));
-        DataSource ds = new EncryptDecorator(new DataSourceDecorator(new FileDataSource("text.txt")));
+        DataSource ds = new EncryptDecorator(dstyham);
         
         while (true) {
             System.out.println("Haluatko salata tiedoston vai lukea salatun tiedoston sisällön?");
