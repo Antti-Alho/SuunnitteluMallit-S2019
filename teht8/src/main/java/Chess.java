@@ -2,18 +2,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author antti
- */
 public class Chess extends Game{
     ArrayList<Nappula> nappulat;
     Scanner sc = new Scanner(System.in);
@@ -21,24 +9,24 @@ public class Chess extends Game{
     @Override
     void initializeGame() {
         nappulat = new ArrayList<>();
-        nappulat.add(new Nappula("N",0,1,0));
-        nappulat.add(new Nappula("N",0,6,0));
+        nappulat.add(new Nappula("n",0,1,0));
+        nappulat.add(new Nappula("n",0,6,0));
         nappulat.add(new Nappula("N",7,1,1));
         nappulat.add(new Nappula("N",7,6,1));
-        nappulat.add(new Nappula("B",0,2,0));
-        nappulat.add(new Nappula("B",0,5,0));
+        nappulat.add(new Nappula("b",0,2,0));
+        nappulat.add(new Nappula("b",0,5,0));
         nappulat.add(new Nappula("B",7,2,1));
         nappulat.add(new Nappula("B",7,5,1));
-        nappulat.add(new Nappula("R",0,0,0));
-        nappulat.add(new Nappula("R",0,7,0));
+        nappulat.add(new Nappula("r",0,0,0));
+        nappulat.add(new Nappula("r",0,7,0));
         nappulat.add(new Nappula("R",7,0,1));
         nappulat.add(new Nappula("R",7,7,1));
-        nappulat.add(new Nappula("Q",0,3,0));
+        nappulat.add(new Nappula("q",0,3,0));
         nappulat.add(new Nappula("Q",7,3,1));
-        nappulat.add(new Nappula("K",0,4,0));
+        nappulat.add(new Nappula("k",0,4,0));
         nappulat.add(new Nappula("K",7,4,1));
         for (int i = 0; i <8; i++) {
-                nappulat.add(new Nappula("P",1,i,0));
+                nappulat.add(new Nappula("p",1,i,0));
                 nappulat.add(new Nappula("P",6,i,1));
         }
     }
@@ -81,6 +69,7 @@ public class Chess extends Game{
         int i = 0;
         for (Nappula nappula : nappulat) {
             if (nappula.toString().equals("K")) i++;
+            if (nappula.toString().equals("k")) i++;
         }
         return i != 2;
     }
@@ -94,7 +83,7 @@ public class Chess extends Game{
     
     String pieceHere(int x,int y){
         for (Nappula nappula : nappulat) {
-            if (nappula.x == x && nappula.y == y) return nappula.nimi;
+            if (nappula.x == x && nappula.y == y) return nappula.toString();
         }
         return " ";
     }
