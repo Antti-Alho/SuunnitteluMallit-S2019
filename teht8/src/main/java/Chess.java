@@ -101,7 +101,7 @@ public class Chess extends Game{
                 nappula.y = y2;
             } 
         }
-        boolean remove = nappulat.remove(toBeDestroyed);
+        nappulat.remove(toBeDestroyed);
     }
     
 }
