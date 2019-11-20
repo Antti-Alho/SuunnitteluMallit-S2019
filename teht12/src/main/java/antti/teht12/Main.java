@@ -78,6 +78,13 @@ class ProxyExample {
         List<Image> images = new ArrayList<>();
         Image image1 = new ProxyImage("HiRes_10MB_Photo1");
         Image image2 = new ProxyImage("HiRes_10MB_Photo2");
+        images.add(image2);
+        images.add(image1);
+        
+        images.forEach((image) -> {
+            image.showData();
+        });
+        
 
         image1.displayImage(); // loading necessary
         image1.displayImage(); // loading unnecessary
