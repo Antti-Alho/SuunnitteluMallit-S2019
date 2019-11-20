@@ -15,11 +15,24 @@ import java.util.Random;
 public class Arvuuttaja {
     private Random r = new Random();
     
+    private class Memento {
+        private final int number;
+
+        Memento(int number) {
+            this.number = number;
+        }
+
+        public int getNumber() {
+            return number;
+        }
+    }
+    
     public void liityPeliin(Asiakas a){
         a.addMemento(new Memento(r.nextInt(1000)));
     }
     
     public boolean arvaus(Asiakas a, int arvaus){
-        return a.getMemento().getNumber() == arvaus;
+        Memento m = (Memento)a.getMemento();
+        return m.getNumber() == arvaus;
     }
 }
