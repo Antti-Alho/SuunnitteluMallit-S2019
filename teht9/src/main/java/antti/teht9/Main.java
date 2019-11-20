@@ -13,14 +13,14 @@ import java.util.Arrays;
  */
 public class Main {
     public static void main(String[] args) {
-        SortMachine sm;
+        SortAlgo sa;
         final int INPUT_LEN = 1000000;
         final int MAX_VAL = 20000000;
         
         
         System.out.println("Bubble sort:");
         int[] arrayToSort = newArray(INPUT_LEN, MAX_VAL);
-        sm = new BubbleSort();
+        sa = new BubbleSort();
         
         Long time = System.currentTimeMillis();
         //sm.sort(arrayToSort);
@@ -28,28 +28,28 @@ public class Main {
         
         System.out.println("Comb sort:");
         arrayToSort = newArray(INPUT_LEN, MAX_VAL);
-        sm = new CombSort();
+        sa = new CombSort();
         
         time = System.currentTimeMillis();
-        sm.sort(arrayToSort);
+        sa.sort(arrayToSort);
         System.out.println("Time: " + (System.currentTimeMillis() - time));
         
         
         System.out.println("Counting sort:");
         arrayToSort = newArray(INPUT_LEN, MAX_VAL);
-        sm = new CountingSort();
+        sa = new CountingSort();
         
         time = System.currentTimeMillis();
-        sm.sort(arrayToSort);
+        sa.sort(arrayToSort);
         System.out.println("Time: " + (System.currentTimeMillis() - time));
         
                         
         System.out.println("Radix sort:");
         arrayToSort = newArray(INPUT_LEN, MAX_VAL);
-        sm = new RadixSort();
+        sa = new RadixSort();
         
         time = System.currentTimeMillis();
-        sm.sort(arrayToSort);
+        sa.sort(arrayToSort);
         System.out.println("Time: " + (System.currentTimeMillis() - time));
     }
     

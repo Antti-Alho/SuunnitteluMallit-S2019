@@ -11,7 +11,7 @@ import java.util.Arrays;
  *
  * @author antti
  */
-public class CountingSort implements SortMachine{
+public class CountingSort implements SortAlgo{
 
     @Override
     public int[] sort(int[] arr){ 
@@ -27,7 +27,6 @@ public class CountingSort implements SortMachine{
             output[count[arr[i] - min] - 1] = arr[i]; 
             count[arr[i] - min]--; 
         } 
-  
         System.arraycopy(output, 0, arr, 0, arr.length);
         return arr;
     } 

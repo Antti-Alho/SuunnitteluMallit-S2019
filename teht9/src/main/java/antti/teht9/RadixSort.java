@@ -11,7 +11,7 @@ import java.util.Arrays;
  *
  * @author antti
  */
-public class RadixSort implements SortMachine{
+public class RadixSort implements SortAlgo{
 
     @Override
     public int[] sort(int[] arr) {

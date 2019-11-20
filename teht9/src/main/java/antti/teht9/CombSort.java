@@ -9,7 +9,7 @@ package antti.teht9;
  *
  * @author antti
  */
-public class CombSort implements SortMachine {
+public class CombSort implements SortAlgo {
 
     private int getNextGap(int gap) {
         gap = (gap*10)/13; 

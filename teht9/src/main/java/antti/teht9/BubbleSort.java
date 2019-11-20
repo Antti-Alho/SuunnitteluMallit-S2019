@@ -9,7 +9,7 @@ package antti.teht9;
  *
  * @author antti
  */
-public class BubbleSort implements SortMachine {
+public class BubbleSort implements SortAlgo {
 
     public BubbleSort() {
     }

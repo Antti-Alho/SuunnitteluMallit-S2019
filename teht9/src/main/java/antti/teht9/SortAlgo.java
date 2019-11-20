@@ -9,6 +9,6 @@ package antti.teht9;
  *
  * @author antti
  */
-interface SortMachine {
+interface SortAlgo {
     public int[] sort(int[] list);
 }
