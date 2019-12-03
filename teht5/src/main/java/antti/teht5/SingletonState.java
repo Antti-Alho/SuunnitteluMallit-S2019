@@ -26,7 +26,7 @@ public class SingletonState {
     public boolean getState(){
         this.counter++;
         System.out.println(this.counter);
-        if (counter % 3 == 0) { 
+        if (counter % 3 == 0) {
             return true;
         } else {
             return false;

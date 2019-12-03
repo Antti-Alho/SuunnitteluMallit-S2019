@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package antti.teht11;
-
-import java.util.ArrayList;
 import java.util.Random;
 
 /**
