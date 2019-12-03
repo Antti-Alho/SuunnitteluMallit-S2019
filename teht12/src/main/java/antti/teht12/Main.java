@@ -82,7 +82,7 @@ class ProxyExample {
         images.add(image1);
         
         images.forEach((image) -> {
-            image.showData();
+            image.showData();   
         });
         
 
