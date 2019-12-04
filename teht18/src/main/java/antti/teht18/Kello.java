@@ -34,10 +34,9 @@ public class Kello implements Cloneable{
     public Object clone() throws CloneNotSupportedException {
         Kello k = (Kello)super.clone(); 
   
-        k.tunnit = new Viisari(tunnit.MAX);
-        k.minuutit  = new Viisari(minuutit.MAX);
-        k.sekuntit  = new Viisari(sekuntit.MAX);
-        k.setTime(tunnit.getI(), minuutit.getI(), sekuntit.getI());
+        k.tunnit = (Viisari) tunnit.clone();
+        k.minuutit  = (Viisari) minuutit.clone();
+        k.sekuntit  = (Viisari) sekuntit.clone();
 
         return k; 
     }

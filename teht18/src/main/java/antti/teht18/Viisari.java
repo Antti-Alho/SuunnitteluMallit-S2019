@@ -9,7 +9,7 @@ package antti.teht18;
  *
  * @author antti
  */
-public class Viisari {
+public class Viisari implements Cloneable {
     final int MAX;
     int i;
     
@@ -38,6 +38,11 @@ public class Viisari {
 
     public int getMAX() {
         return MAX;
+    }
+    
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
     
 }
